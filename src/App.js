@@ -35,21 +35,6 @@ class App extends Component {
   }
 }
 
-fractionOf = (symbol) => {
-
-if(["/","-","+","*"].indexOf(symbol) > -1){
-      let {previous} = this.state;
-      previous.push(this.state.current + symbol);
-      this.setState({previous, nextIsReset: true});
-    }else{
-      if((this.state.current === "0" && symbol !== ".") || this.state.nextIsReset){
-         this.setState({current: symbol, nextIsReset: false});
-    }else{
-      this.setState({current: this.state.current + symbol});
-    }
-
-}
-
 calculate = (symbol) => {
   let {current, previous, nextIsReset} = this.state;
   if(previous.length > 0){
