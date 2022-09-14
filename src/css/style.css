@@ -26,7 +26,7 @@ input.result {
     height: 100px;
     width: auto;
     border: none;
-    text-align: right;
+    text-align: left;
     font-size: 32px;
     position: relative;
     max-width: 100vw;
